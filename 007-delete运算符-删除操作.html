@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//delete 用来删除对象的属性或者数组元素 
+	var o = {x:1,y:1};
+	console.log(delete o.x);
+	console.log("x" in o); //false 属性已经不存在
+	var a = [1,2,3];
+	delete a[2]; // 删除第三个元素
+	2 in a; // false 第三个元素不存在
+	a.length;//3 注意，长度没有改变，删除操作会留一个“洞”
+	</script>
+</body>
+</html>

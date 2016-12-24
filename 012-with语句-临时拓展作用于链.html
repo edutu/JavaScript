@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//with语句将form对象添加到作用域链顶层
+	//with语句提供了一种读取对象的属性的快捷方式，但并不能创建属性
+	//不推荐使用with，他使代码难以优化
+	with(document.forms[0]){
+		name.value = "";
+		address.value = "";
+	}
+	</script>
+</body>
+</html>

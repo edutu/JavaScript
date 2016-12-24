@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//如果右侧对象拥有一个名为左操作数值的属性名，返回true
+	//左操作数一般为字符串或可以转化为字符串
+	//右操作数一般为对象
+	var point = {x:1,y:1};
+	alert("x" in point); // true
+	alert("z" in point); // false
+	alert("toString" in point); //true 对象继承了toString()方法
+	</script>
+</body>
+</html>

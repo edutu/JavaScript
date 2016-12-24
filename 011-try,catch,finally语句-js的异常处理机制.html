@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	function aa(x){
+		if(x<0)throw new Error("x不能是负数"); // 如果输入参数是非法的，抛出一个异常
+		for(var f=1; x>1;f*=x,x--){
+			return f;
+		}
+	}
+	try {
+		var n = Number(prompt('请输入一个正整数',""));
+		var f = aa(n);
+		alert(n + "!=" +f);
+	}catch(ex){
+		alert(ex);
+	}
+	</script>
+</body>
+</html>

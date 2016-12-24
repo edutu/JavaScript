@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//异常：错误时产生的信号
+	//抛出异常：用信号通知异常状况
+	//捕获异常：处理这个信号
+	function aa(x){
+		if(x<0)throw new Error("x不能是负数"); // 如果输入参数是非法的，抛出一个异常
+		for(var f=1; x>1;f*=x,x--){
+			return f;
+		}
+	}
+	aa(-4)
+	</script>
+</body>
+</html>

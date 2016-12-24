@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>isNaN</title>
+</head>
+<body>
+	<script>
+	var x = NaN;
+	if(x == NaN){ // 不能通过x == NaN判断
+		console.log(true);
+	}else{
+		console.log(false);
+	}
+
+	if(x != NaN){ // 以此来判断x是否是NaN
+		console.log(false);
+	}else{
+		console.log(true);
+	}
+	//第二种方法 是NaN返回true
+	console.log(isNaN(x));
+	</script>
+</body>
+</html>
