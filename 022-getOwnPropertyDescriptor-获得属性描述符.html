@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//Object.getOwnPropertyDescriptor()只能获得自有属性的属性描述符
+
+	console.log(Object.getOwnPropertyDescriptor({x:1},"x")) //数据属性的特性有四种：value writable enumerable configurable
+	var random ={
+		get octet() {return Math.floor(Math.random()*256);}
+	}
+	console.log(Object.getOwnPropertyDescriptor(random,"octet"))//存储器属性的特性有四种：get set enumerable configurable
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var o = {
+		data_prop: 123, // 普通的数据属性
+
+		//存取器属性是成对出现的函数
+		get accessor_prop() {return this.data_prop}, // 注意没有冒号
+		set accessor_prop(value) {this.data_prop = value}
+	}
+	o.accessor_prop = 321; //注意赋值与取值方式，他们是函数但与普通函数不同
+	console.log(o.accessor_prop);
+	</script>
+</body>
+</html>

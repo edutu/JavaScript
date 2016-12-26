@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var o = {};
+	//注意，可配置和可写是不同
+	Object.defineProperty(o,"x",{
+		value:1,
+		writable:true,
+		enumerable:false,
+		configurable:true
+	})
+	console.log(o)
+	console.log(o.x)
+	//Object.defineProperties 设置多属性
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// 通过原型继承创建一个新对象
+	function inherit(p){
+		if(p == null) throw TypeError(); // p 是一个对象 但不能是null
+		if(Object.create)
+			return Object.create(p);
+		var t = typeof p;
+		if(t !== "object" && t !== "function") throw TypeError();
+		function f(){}; // 定义一个空构造函数
+		f.prototype = p; //将原型属性设置为p
+		return new f();
+	}
+	</script>
+</body>
+</html>
