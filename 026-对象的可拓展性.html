@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//可扩展性表示是否可以给对象添加属性
+	var o = Object.seal(Object.create(Object.freeze({x:1}),{y:{value:2,writable:true}}));
+	</script>
+</body>
+</html>

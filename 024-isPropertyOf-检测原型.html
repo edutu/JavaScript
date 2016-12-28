@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//isPropertyOf用来检测原型，实现的功能和instanceof类似
+	var p = {x:1};
+	var o = Object.create(p);
+	console.log(p.isPropertyOf(o)); // true o 继承自p
+	console.log(Object.prototype.isPropertyOf(o)) // true p继承自Object.prototype
+	</script>
+</body>
+</html>

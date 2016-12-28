@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//classof()函数是自封装的函数，用来返回对象的类，表示对象的类型信息
+	function classof(o){
+		if(o === null)return "Null"; // null 和 undefined做特殊处理 es5不用这样做
+		if(o === undefined)return "Undefined";
+		return Object.prototype.toString.call(o).slice(8,-1); // 间接地调用toString方法
+	}
+	console.log(classof(1));
+	console.log(classof(true))
+	</script>
+</body>
+</html>
